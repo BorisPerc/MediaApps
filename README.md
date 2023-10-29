@@ -1,4 +1,4 @@
-# MediaApps
+# Media Apps - Media Server php/SQL WEB App
 Media Apps base on php/SQL - Media/Audio Server
 
 1. Media Shareing and playing music, generating play lists,....
