@@ -12,12 +12,13 @@ Install WEBApps on your WindowsNT Server or Linux Server - Apache/Nginx + SQL + 
 
 All WEB Apps Media Servers are optimized for php7.4 and SQL10 you can directly install them on your Home Server.
 
-INFO: Audio Server for scanning different location setup - scan.php (line 34+35+++ add your root)
+INFO: Audio Server for scanning different location setup - scan.php (line 34+35+++ add your root) - From the web uploaded music is in dir /music/ allow only mp3 format. You can upload on your root server example /home/admin/htdocs/music/ or /wwwroot/music/ directly mp3  music format and in dashboard options click scan to update your SQL.
 
 33.	 $MUSIC_DIR = MEDIAROOT;
 34.  $MUSIC_DIR = "/mnt/media/disk/mp3/";
 35.  $MUSIC_DIR = "/mnt/media/disk/music/";
-...
+36.  ... Copy and past upper dirrective with your extra sources MUSIC DIR CAN BE DEFINED NO LIMIT ROOT DISK
+
 
 # 1.1. Audio Server - php/SQL WEB App mp3player
 Upload and unzip audio.zip in your root directory of your domain or subdomain /htdocs/ or /var/www/html/ or /home/www/ .... your vhost root.
@@ -37,13 +38,16 @@ FLUSH PRIVILEGES;
 quit
 
 
-Now edit database.php and input your data generated for Audio Server and open VHost URL: 
+Now edit database.php and input your data generated for Audio Server SQL DATABASE + SQL USER + PASSWORD and open VHost for example your URL: 
 
 http://www.mydomain.com/
 
+if auto install do not start try:
+
 http://www.mydomain.com/setup.php
 
-And login no password localplayer
+After setup login no password localplayer - Change password for login in options.
+
 
 # 1.2. Ampache Compact editon for php7.4 Media Server
 
