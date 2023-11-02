@@ -3,8 +3,21 @@ Media Apps base on php/SQL - Media/Audio Server - install apps for php7.4 Apache
 Install WEBApps on your WindowsNT Server or Linux Server - Apache/Nginx + SQL + php7.4 + extra phpmyadmin + obligatory FFmpeg binary file path: on Linux(/usr/bin/ffmpeg) or Windows(C:\\ffmpeg\bin\ffmpeg.exe) + extra obligatory php-modules
 
 
-# 1. Media Shareing and playing music, generating play lists,....
-Audio Server php7.2+, Ampache5-Compact-7.4, SoundCloud/DeepSound-CompactExtra-7.2+
+# 1. WEB Apps - Media Upload&Share
+- Audio Server php7.2+ WEB Apps for upload and play mp3 format Public mp3player
+
+- Ampache5 Compact php7.4 WEB App Media Server for upload and play media formats Public Media Share
+
+- SoundCloud/DeepSound-CompactExtra-7.2+ WEB App Media Server for upload and play media formats Public Media Share
+
+All WEB Apps Media Servers are optimized for php7.4 and SQL10 you can directly install them on your Home Server.
+
+INFO: Audio Server for scanning different location setup - scan.php (line 34+35+++ add your root)
+
+33.	 $MUSIC_DIR = MEDIAROOT;
+34.  $MUSIC_DIR = "/mnt/media/disk/mp3/";
+35.  $MUSIC_DIR = "/mnt/media/disk/music/";
+...
 
 # 1.1. Audio Server - php/SQL WEB App mp3player
 Upload and unzip audio.zip in your root directory of your domain or subdomain /htdocs/ or /var/www/html/ or /home/www/ .... your vhost root.
@@ -72,7 +85,7 @@ sudo mariadb
 
 CREATE DATABASE deepsound;
 
-CREATE USER 'ampache'@'localhost' identified by 'password';
+CREATE USER 'deepsound'@'localhost' identified by 'password';
 
 GRANT ALL PRIVILEGES ON deepsound.* to 'deepsound'@'localhost';
 
